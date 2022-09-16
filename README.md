@@ -26,7 +26,7 @@ The below steps will create an Azure Synapse workspace using the Azure portal.
     1. Under Select Data Lake Storage Gen 2, click Create New and name it contosolake.
     2. Under Select Data Lake Storage Gen 2, click File System and name it contosofs.
 
-6. Select Review + create > Create. Your workspace is ready in a few minutes.
+6. Select Review + create > Create. Your workspace will be ready in a few minutes.
 
 After your Azure Synapse workspace is created, you have two ways to open Synapse Studio:
 
