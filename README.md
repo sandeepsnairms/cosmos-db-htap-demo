@@ -51,7 +51,7 @@ az cosmosdb update --name {Cosmos Account Name} --analytical-storage-schema-type
 2. Click on the "+" icon and  then select Import.
 3. Browse and locate the Spark Notebook and SQL View files.
 
-    ![Import Files in Synapse](.\images\importfiles.png)
+    ![Import Files in Synapse](images/importfiles.png)
 
 ## Run the Demo
 
@@ -65,7 +65,7 @@ az cosmosdb update --name {Cosmos Account Name} --analytical-storage-schema-type
     2. Use **Severless SQL endpoint** value as the Server Name
     3. Use **SQL admin username** value as the User Name
 
-    ![Import Files in Synapse](.\images\sqladminpwd.png)
+    ![Import Files in Synapse](images/sqladminpwd.png)
 
 ### Spark Runtime
 
