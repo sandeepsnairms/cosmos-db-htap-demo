@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CallLog": {
+      "commandName": "Project",
+      "commandLineArgs": ""
+    }
+  }
+}
