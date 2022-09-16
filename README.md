@@ -66,13 +66,12 @@ az cosmosdb update --name {Cosmos Account Name} --analytical-storage-schema-type
 
 ### Run CallLogger Application
 
-1. Execute the CallLogger.exe from command prompt.
+1. Execute the CallLogger.exe from command prompt to generate fake call logs and populate the CallRecords collection in Cosmos DB.
 2. Optionally pass command line arguments to modify fake data pattern.
 
 ```dos
 CallLogger.exe offset=90 count=100 caller=091-945-123-0008 
 ```
-
 
 ### SQL Serverless
 
