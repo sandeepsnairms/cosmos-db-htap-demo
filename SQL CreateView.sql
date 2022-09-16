@@ -51,8 +51,8 @@ SELECT *
 CREATE DATABASE contosomobilelinksql COLLATE Latin1_General_100_BIN2_UTF8
 GO
 
-
---Create View
+-- Switch to the newly created database
+-- Create View
 CREATE VIEW CallRecordsView_SQL
 AS SELECT  StartDateTime_STR,EndDateTime_STR,DurationSec,CallFrom,CallTo,CallType, CallLocationId,BaseLocationId,IsRoaming,IsIncoming,SubscriberId,BillCycle,DeviceModel,DeviceOS
        FROM OPENROWSET(
@@ -78,3 +78,5 @@ AS SELECT  StartDateTime_STR,EndDateTime_STR,DurationSec,CallFrom,CallTo,CallTyp
               DeviceOS VARCHAR(256) COLLATE Latin1_General_100_BIN2_UTF8 '$.device.object.OS.string',
               pk VARCHAR(256) COLLATE Latin1_General_100_BIN2_UTF8 '$.pk.string'     
        )as [CallRecords]
+
+-- Execute the view from any third party application like PowerBi or SQL Server Management Studio

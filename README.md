@@ -8,8 +8,11 @@ Synapse Link for Cosmos DB automatically syncs data between the Transaction stor
 
 ### Create your Cosmos DB SQL Account
 
-Refer to [Create an Azure Cosmos DB SQL API account](https://docs.microsoft.com/azure/cosmos-db/sql/how-to-create-account?tabs=azure-portal)
+1. Refer to [Create an Azure Cosmos DB SQL API account](https://docs.microsoft.com/azure/cosmos-db/sql/how-to-create-account?tabs=azure-portal)
 
+2. Create a database called "ContosoMobile" with 4000 RU as Throughput.
+3. Create a collection called "CallRecords" with '/pk' as PartitionKey.
+4. Create a collection called "Bills" with '/id' as PartitionKey.
 
 ### Create your Synapse Workspace
 The below steps will create an Azure Synapse workspace using the Azure portal.
@@ -53,7 +56,23 @@ az cosmosdb update --name {Cosmos Account Name} --analytical-storage-schema-type
 
     ![Import Files in Synapse](images/importfiles.png)
 
+### Setting up the CallLogger Application
+
+1. Download or clone this repo and open the "Call Logger Application\CallLog" folder in VS code.
+2. Edit appsettings.json to replace the {Cosmos Account Name} and {Cosmos PRIMARY Key} placeholders with your own value.
+3. Build the application
+
 ## Run the Demo
+
+### Run CallLogger Application
+
+1. Execute the CallLogger.exe from command prompt.
+2. Optionally pass command line arguments to modify fake data pattern.
+
+```dos
+CallLogger.exe offset=90 count=100 caller=091-945-123-0008 
+```
+
 
 ### SQL Serverless
 
