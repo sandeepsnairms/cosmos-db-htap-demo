@@ -1,5 +1,8 @@
 # HTAP Demo using Synapse Link for Cosmos DB
 
+An end to end demonstration of Cloud-native hybrid transactional and analytical processing (HTAP) capability that enables near real time analytics over operational data in Azure Cosmos DB using Azure Synapse Link for Cosmos DB.
+
+Synapse Link for Cosmos DB automatically syncs data between the Transaction store and Analytical store. The analytical store data can be processed using SQL Serverless or Spark runtime, thus making the analytical workload cost effective and independent of the transactional compute resources.
 
 ## Setting up the Environment
 
@@ -50,10 +53,26 @@ az cosmosdb update --name {Cosmos Account Name} --analytical-storage-schema-type
 
     ![Import Files in Synapse](.\images\importfiles.png)
 
-
 ## Run the Demo
 
-### Create SQL View
+### SQL Serverless
 
-Execute  the scripts in the CreateView while following the instructions as comments
+1. Open the **CreateView** SQL file from the Develop tab in Synapse Studio.
+2. Update the {Cosmos Account Name} and {Cosmos PRIMARY Key} placeholders.
+3. Execute the scripts to create the SQL View. Follow the instructions provided as comments.
+4. To connect to the SQl Serverless, get the connection details from the Synapse workspace Overview tab.
+    1. Generate the password using **Reset SQL admin password** link.
+    2. Use **Severless SQL endpoint** value as the Server Name
+    3. Use **SQL admin username** value as the User Name
 
+    ![Import Files in Synapse](.\images\sqladminpwd.png)
+
+### Spark Runtime
+
+1. Open the **GenerateBill** Spark Notebook from the Develop tab in Synapse Studio.
+2. Execute the scripts in sequence. Follow the instructions provided.
+
+## Additional Resources
+- [Azure Synapse Link for Azure Cosmos DB, benefits, and when to use it](https://docs.microsoft.com/azure/cosmos-db/synapse-link)
+- [Configure and use Azure Synapse Link for Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/configure-synapse-link)
+- [Frequently asked questions about Azure Synapse Link for Azure Cosmos DB](https://docs.microsoft.com/en-us/azure/cosmos-db/synapse-link-frequently-asked-questions)
