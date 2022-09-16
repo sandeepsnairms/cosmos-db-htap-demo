@@ -53,7 +53,7 @@ GO
 
 
 --Create View
-CREATE VIEW CallRecordsViEW_SQL
+CREATE VIEW CallRecordsView_SQL
 AS SELECT  StartDateTime_STR,EndDateTime_STR,DurationSec,CallFrom,CallTo,CallType, CallLocationId,BaseLocationId,IsRoaming,IsIncoming,SubscriberId,BillCycle,DeviceModel,DeviceOS
        FROM OPENROWSET(
               PROVIDER = 'CosmosDB',
